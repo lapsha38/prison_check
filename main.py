@@ -16,7 +16,7 @@ def generate_cards():
     return cards_list
 
 # trying to open the box with the card
-def dead_or_alive():
+def dead_or_alive() -> str:
     random_cards = generate_cards()
 
     result = check_that_cards_is_correct(random_cards)
@@ -40,7 +40,7 @@ def check_that_cards_is_correct(random_cards) -> int:
 
     return win_prisoners_count
 
-def get_statistic():
+def get_statistic() -> str:
     good_tryes = 0
 
     for i in range (STATISTIC_COUNT):
@@ -53,6 +53,6 @@ def get_statistic():
 
     return "Survive percent is: {}, we tried {} times".format(return_value, STATISTIC_COUNT)
 
-
+# use loop for statistic
 for i in range(10):
     print(get_statistic())
