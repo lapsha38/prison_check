@@ -10,7 +10,7 @@ STATISTIC_COUNT = 10000
 
 
 # shuffle cards func
-def generate_cards():
+def generate_cards() -> list:
     cards_list = [x for x in range(PRISONERS_COUNT)]
     random.shuffle(cards_list)
     return cards_list
